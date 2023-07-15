@@ -7,13 +7,13 @@ export class Paragrafo extends LitElement {
         display: block;
         color: var(--cor-secundaria, #665e57);
         font-family: var(--fonte-corpo);
-        font-size: 16px;
+        font-size: 1rem;
         font-style: normal;
         font-weight: 400;
         line-height: 100%; /* 20px */
       }
 
-      p{
+      p {
         margin: 0;
       }
     `,

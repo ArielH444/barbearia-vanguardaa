@@ -14,6 +14,8 @@ export class Quadro extends LitElement {
         background: #d9d9d9;
         mix-blend-mode: multiply;
         box-shadow: 0px 24px 34px 0px rgba(0, 0, 0, 0.25);
+        
+        overflow: hidden;
       }
     `,
   ];

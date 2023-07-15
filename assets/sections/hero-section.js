@@ -1,20 +1,10 @@
 import { LitElement, html, css } from "lit";
+import { section } from "../styles/section-style";
 
 export class HeroSection extends LitElement {
   static styles = [
+    section,
     css`
-      :host {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        width: 360px;
-        height: 640px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 4.375rem;
-      }
-
       section {
         display: flex;
         padding: 16px 0px;
@@ -43,18 +33,28 @@ export class HeroSection extends LitElement {
         right: -72px;
         bottom: -39px;
       }
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+
+      app-paragrafo {
+        font-size: 1.25rem;
+      }
     `,
   ];
 
   render() {
     return html`
-      <div></div>
       <section>
         <app-titulo
           ><h1>Barbearia <span>Vanguarda</span></h1>
           <app-logo></app-logo>
         </app-titulo>
-        <app-quadro></app-quadro>
+        <app-quadro>
+          <img src="slider-1.jpg" alt="Imagem slider" />
+        </app-quadro>
       </section>
       <app-paragrafo
         >Obtenha um estilo impecável, do cabelo à barba.</app-paragrafo
