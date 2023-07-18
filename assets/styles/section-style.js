@@ -3,7 +3,7 @@ import { css } from "lit";
 export const section = css`
   :host {
     width: 100%;
-    height: 100%;
+    height: 100svh; /* Smallest View Height */
 
     display: flex;
     box-sizing: border-box;
@@ -14,6 +14,6 @@ export const section = css`
 
     padding: 2rem;
     overflow: hidden;
-
+    position: relative;
   }
 `;

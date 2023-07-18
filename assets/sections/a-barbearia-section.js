@@ -36,15 +36,9 @@ export class ABarbeariaSection extends LitElement {
 
       app-paragrafo {
         width: 270px;
-
-        color: var(--cor-secundaria, #665e57);
         text-align: justify;
-        font-family: var(--fonte-corpo);
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
         line-height: 140%; /* 22.4px */
-        letter-spacing: -1.28px;
+        letter-spacing: -1.424px;
       }
 
       app-paragrafo {
@@ -81,6 +75,8 @@ export class ABarbeariaSection extends LitElement {
         left: -150px;
         top: 72px;
         z-index: -20;
+
+      --cor-bolinhas: var(--tom-3);
       }
 
       img {
@@ -92,12 +88,9 @@ export class ABarbeariaSection extends LitElement {
   render() {
     return html`
       <app-titulo>A Barbearia</app-titulo><app-bolinhas></app-bolinhas>
-        <app-quadro></app-paragrafo><app-quadro>
-            <img src="a-barbearia.jpg" alt="imagem"/>
-        </app-quadro>
+      <app-quadro><img src="a-barbearia.jpg" alt="Imagem"/></app-quadro>
       <article>
-        <app-paragrafo
-          >Bem-vindo à Barbearia Vanguarda, onde tradição e inovação se
+        <app-paragrafo>Bem-vindo à Barbearia Vanguarda, onde tradição e inovação se
           encontram para proporcionar cortes de cabelo e barbas impecáveis. Com
           uma equipe de barbeiros especializados, combinamos técnicas
           tradicionais com as últimas tendências, garantindo um atendimento
