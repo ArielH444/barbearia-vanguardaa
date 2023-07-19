@@ -6,6 +6,10 @@ export class ServicosSection extends LitElement {
     section,
     css`
 
+    :host {
+      padding: 2rem 0;
+    }
+       
       app-bolinhas {
         --cor-bolinhas: var(--tom-3);
 
@@ -76,6 +80,8 @@ export class ServicosSection extends LitElement {
       }
 
       app-quadro {
+        height: 320px;
+        width: 165;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0; 
 
