@@ -16,4 +16,11 @@ export const section = css`
     overflow: hidden;
     position: relative;
   }
+
+  button:hover,
+      button:active {
+        background-color: color-mix(in srgb, white 15%, var(--button-background, var(--tom-2)));
+        color: var(--tom-1);
+
+      }
 `;
