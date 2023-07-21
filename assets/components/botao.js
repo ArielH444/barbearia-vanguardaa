@@ -12,7 +12,7 @@ export class Botao extends LitElement {
       ::slotted(a) {
         width: inherit;
 
-        display: inline-flex;
+        display: flex;
         padding: 5px 24px;
         border: 0;
         justify-content: flex-start;

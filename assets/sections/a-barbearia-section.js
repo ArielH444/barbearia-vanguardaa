@@ -96,7 +96,7 @@ export class ABarbeariaSection extends LitElement {
           tradicionais com as últimas tendências, garantindo um atendimento
           personalizado em um ambiente acolhedor.</app-paragrafo
         >
-        <app-botao>Leia Mais</app-botao>
+        <app-botao><a href="Serviços">Leia Mais</a></app-botao>
       </article>
     `;
   }
