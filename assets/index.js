@@ -1,5 +1,3 @@
-import { format } from 'path'
-
 // Componentes
 export * from './components/logo'
 export * from './components/titulo'
@@ -18,6 +16,3 @@ export * from './sections/servicos-section'
 export * from './sections/contato-section'
 export * from './sections/unidades-section'
 export * from './sections/menu-section'
-
-// Páginas
-export * from './pages/home-page'

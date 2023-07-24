@@ -1,4 +1,5 @@
 import { LitElement, html, css } from "lit";
+import { nav } from "../../main";
 
 export class Navbar extends LitElement {
   static styles = [
@@ -36,7 +37,7 @@ export class Navbar extends LitElement {
   render() {
     return html`
       <app-logo></app-logo>
-      <feather-icon icon="menu"></feather-icon>
+      <feather-icon icon="menu" @click=${nav.abrir}></feather-icon>
     `;
   }
 }
