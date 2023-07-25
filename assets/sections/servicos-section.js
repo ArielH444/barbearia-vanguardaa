@@ -5,11 +5,10 @@ export class ServicosSection extends LitElement {
   static styles = [
     section,
     css`
+      :host {
+        padding: 2rem 0;
+      }
 
-    :host {
-      padding: 2rem 0;
-    }
-       
       app-bolinhas {
         --cor-bolinhas: var(--tom-3);
 
@@ -32,10 +31,6 @@ export class ServicosSection extends LitElement {
         color: var(--tom-3);
         font-weight: 600; /* SemiBold */
       }
-
-      
-
-      
 
       .titulo {
         width: 270px;
@@ -67,12 +62,12 @@ export class ServicosSection extends LitElement {
 
       article app-paragrafo {
         font-weight: 700;
-        color: var(--tom-3 #664E38);
+        color: var(--tom-3 #664e38);
       }
 
       .descricao {
         width: 108px;
-        font-size: 875.rem;
+        font-size: .75rem;
       }
 
       img {
@@ -81,10 +76,39 @@ export class ServicosSection extends LitElement {
 
       app-quadro {
         height: 320px;
-        width: 165;
+        width: 165px;
         border-top-left-radius: 0;
-        border-bottom-left-radius: 0; 
+        border-bottom-left-radius: 0;
+      }
 
+      @media (min-width: 768px) {
+        :host {
+          padding: 3rem 0;
+        }
+        section {
+          align-self: center;
+        }
+
+        app-quadro {
+          width: 265px;
+          height: 520px;
+          border-radius: 8px;
+        }
+
+        .titulo {
+          width: 330px;
+          font-size: 1.25rem;
+        }
+        article app-paragrafo:first-child {
+          font-size: 1.25rem;
+        }
+        .descricao {
+          width: 158px;
+          font-size: 1rem;
+        }
+        aside {
+          padding: 96px 0px 0px 0px;
+        }
       }
     `,
   ];
@@ -97,7 +121,7 @@ export class ServicosSection extends LitElement {
 
       <section>
         <app-quadro>
-            <img loading="lazy" src="servicos-1.jpg" alt="Imagens serviços 1" />
+          <img loading="lazy" src="servicos-1.jpg" alt="Imagens serviços 1" />
         </app-quadro>
 
         <aside>

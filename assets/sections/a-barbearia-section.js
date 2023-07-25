@@ -15,7 +15,7 @@ export class ABarbeariaSection extends LitElement {
 
       article {
         display: flex;
-        padding: 9px 0px 4px 0px;
+        padding: 8px 12px 0px 0px;
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
@@ -41,24 +41,14 @@ export class ABarbeariaSection extends LitElement {
         letter-spacing: -1.424px;
       }
 
-      app-paragrafo {
-        width: 335px;
-        height: 335px;
-
-        position: absolute;
-        right: -82px;
-        top: 106px;
-        left: 0;
-        top: 106px;
-      }
 
       app-quadro {
         width: 335px;
-        right: 335;
-        border-radius: 100%px;
+        height: 335px;
+        border-radius: 100%;
 
         position: absolute;
-        left: -82px;
+        right: -82px;
         top: 106px;
         z-index: -10;
       }
@@ -76,7 +66,7 @@ export class ABarbeariaSection extends LitElement {
         top: 72px;
         z-index: -20;
 
-      --cor-bolinhas: var(--tom-3);
+        --cor-bolinhas: var(--tom-3);
       }
 
       img {
@@ -84,8 +74,45 @@ export class ABarbeariaSection extends LitElement {
       }
 
       app-botao {
-         
         display: var(--display-botao);
+      }
+
+      @media (min-width: 768px) {
+        app-quadro {
+          width: 600px;
+          height: 600px;
+
+          right: -182px;
+          top: 200;
+        }
+
+        app-bolinhas {
+          width: 400px;
+          height: 400px;
+
+          left: -20px;
+          top: 272px;
+        }
+
+        app-paragrafo {
+          width: 100%;
+        }
+
+        article {
+          width: 60%;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        app-quadro {
+          top: 100px;
+        }
+        app-bolinhas {
+          top: 112px;
+        }
+        article {
+          width: 70%;
+        }
       }
     `,
   ];
@@ -93,9 +120,12 @@ export class ABarbeariaSection extends LitElement {
   render() {
     return html`
       <app-titulo>A Barbearia</app-titulo><app-bolinhas></app-bolinhas>
-      <app-quadro><img loading="lazy" src="a-barbearia.jpg" alt="Imagem"/></app-quadro>
+      <app-quadro
+        ><img loading="lazy" src="a-barbearia.jpg" alt="Imagem"
+      /></app-quadro>
       <article>
-        <app-paragrafo>Bem-vindo à Barbearia Vanguarda, onde tradição e inovação se
+        <app-paragrafo
+          >Bem-vindo à Barbearia Vanguarda, onde tradição e inovação se
           encontram para proporcionar cortes de cabelo e barbas impecáveis. Com
           uma equipe de barbeiros especializados, combinamos técnicas
           tradicionais com as últimas tendências, garantindo um atendimento
