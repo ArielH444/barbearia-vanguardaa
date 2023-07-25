@@ -97,7 +97,7 @@ export class ServicosSection extends LitElement {
 
       <section>
         <app-quadro>
-            <img src="servicos-1.jpg" alt="Imagens serviços 1" />
+            <img loading="lazy" src="servicos-1.jpg" alt="Imagens serviços 1" />
         </app-quadro>
 
         <aside>

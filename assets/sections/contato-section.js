@@ -53,7 +53,7 @@ export class ContatoSection extends LitElement {
     return html`
       <app-titulo> Entre em contato conosco </app-titulo>
       <app-quadro>
-        <img src="thumb-contato.png" alt="Imagem contato" />
+        <img loading="lazy" src="thumb-contato.png" alt="Imagem contato" />
       </app-quadro> 
       <div>
         <app-botao> <a href="mailto: contato@barbeariavanguarda.com">

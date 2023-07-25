@@ -53,7 +53,7 @@ export class HeroSection extends LitElement {
           <app-logo></app-logo>
         </app-titulo>
         <app-quadro>
-          <img src="slider-1.jpg" alt="Imagem slider" />
+          <img loading="lazy" src="slider-1.jpg" alt="Imagem slider" />
         </app-quadro>
       </section>
       <app-paragrafo
