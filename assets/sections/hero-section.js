@@ -44,15 +44,20 @@ export class HeroSection extends LitElement {
         font-size: 1.25rem;
       }
 
+      swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
       @media (max-width: 1024px) {
         app-logo {
           width: 220px;
           height: 220px;
         }
       }
-        @media (min-width: 1024px) {
+      @media (min-width: 1024px) {
         app-paragrafo {
-          display: none
+          display: none;
         }
       }
     `,
@@ -69,7 +74,17 @@ export class HeroSection extends LitElement {
           <app-logo></app-logo>
         </app-titulo>
         <app-quadro>
-          <img loading="lazy" src="slider-1.jpg" alt="Imagem slider" />
+          <swiper-container loop="true" autoplay="true">
+            <swiper-slide>
+            <img loading="lazy" src="slider-1.jpg" alt="Imagem slider" />
+            </swiper-slide>
+            <swiper-slide>
+            <img loading="lazy" src="slider-2.jpg" alt="Imagem slider" />
+            </swiper-slide>
+            <swiper-slide>
+            <img loading="lazy" src="slider-3.jpg" alt="Imagem slider" />
+            </swiper-slide>
+          </swiper-container>
         </app-quadro>
       </section>
       <app-paragrafo
