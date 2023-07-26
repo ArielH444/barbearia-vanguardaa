@@ -41,7 +41,6 @@ export class ABarbeariaSection extends LitElement {
         letter-spacing: -1.424px;
       }
 
-
       app-quadro {
         width: 335px;
         height: 335px;
@@ -99,7 +98,12 @@ export class ABarbeariaSection extends LitElement {
         }
 
         article {
-          width: 60%;
+          width: 70%;
+          border-image-source: linear-gradient(
+            20deg,
+            rgba(102, 78, 56, 0) 50%,
+            rgba(102, 78, 56, 1) 100%
+          );
         }
       }
 

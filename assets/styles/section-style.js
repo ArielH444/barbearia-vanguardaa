@@ -29,7 +29,7 @@ export const section = css`
       @media (min-width: 768px) {
 
       :host {
-        overflow: visible
+        overflow: visible;
       }
       }
 

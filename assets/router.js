@@ -14,7 +14,7 @@ export function initRouter() {
         component: "a-barbearia-page",
         action: () => import("./pages/home-page"),
       },
-  ]);
+  ])
 
   return router;
 }

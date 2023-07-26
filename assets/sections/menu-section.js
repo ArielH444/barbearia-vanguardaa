@@ -50,7 +50,7 @@ export class MenuSection extends LitElement {
         gap: 24px;
       }
 
-      a {
+      a, button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -63,7 +63,17 @@ export class MenuSection extends LitElement {
         font-weight: 500;
         line-height: normal;
         text-decoration: none;
+
+        cursor: pointer;
       }
+
+      a:active,
+      button:active {
+        color: var(--tom-1);
+      }
+
+
+
 
       button {
         padding: 0;
@@ -75,11 +85,21 @@ export class MenuSection extends LitElement {
       feather-icon {
         display: flex;
         width: 24px;
-        fill: white;
-        color: white;
-      }
+        fill: currentColor;
+
+      } 
+
+      
     `,
   ];
+
+  rolarContato() {
+    return nav.rolarPara('#contato')
+  }
+
+  rolarUnidades() {
+    return nav.rolarPara('#unidades')
+  }
 
   render() {
     return html`
@@ -87,12 +107,12 @@ export class MenuSection extends LitElement {
         <app-logo></app-logo>
 
         <nav>
-          <a href="">Unidades <feather-icon icon="map-pin"></feather-icon></a>
-          <a href="">Contato <feather-icon icon="phone"></feather-icon></a>
-          <a href="servicos"
+          <button @click=${this.rolarUnidades}>Unidades <feather-icon icon="map-pin"></feather-icon></button>
+          <button @click=${this.rolarContato}>Contato <feather-icon icon="phone"></feather-icon></button>
+          <a @click=${nav.fechar} href="servicos"
             >Serviços <feather-icon icon="scissors"></feather-icon
           ></a>
-          <a href="A-Barbearia"
+          <a @click=${nav.fechar} href="A-Barbearia"
             >A Barbearia
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +125,7 @@ export class MenuSection extends LitElement {
               />
             </svg>
           </a>
-          <a href="/">Home <feather-icon icon="home"></feather-icon></a>
+          <a @click=${nav.fechar} href="/">Home <feather-icon icon="home"></feather-icon></a>
           <button @click=${nav.fechar}>
             <feather-icon icon="x"></feather-icon>
           </button>

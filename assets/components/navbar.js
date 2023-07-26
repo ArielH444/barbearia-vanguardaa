@@ -6,21 +6,22 @@ export class Navbar extends LitElement {
     css`
       :host {
         width: 100%;
-        height: 96px;
         box-sizing: border-box;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 2rem;
+        padding: 2rem;
 
-        position: fixed;
+        position: fixed; /* absolute */
         top: 0;
+        left: 0;
         z-index: 100;
         mix-blend-mode: difference;
         color: white;
 
         transition: top 1s;
+        pointer-events: none;
 
       }
 
@@ -30,7 +31,16 @@ export class Navbar extends LitElement {
 
       feather-icon {
         cursor: pointer;
+        pointer-events: auto;
       }
+
+      @media (min-width: 768px) {
+        app-logo {
+          width: 96px;
+          height: 96px;
+        }
+      }
+      
     `,
   ];
 
