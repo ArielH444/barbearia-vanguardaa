@@ -81,6 +81,17 @@ export class ServicosSection extends LitElement {
         border-bottom-left-radius: 0;
       }
 
+      swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       @media (min-width: 768px) {
         :host {
           padding: 3rem 0;
@@ -127,7 +138,25 @@ export class ServicosSection extends LitElement {
 
       <section>
         <app-quadro>
-          <img loading="lazy" src="servicos-1.jpg" alt="Imagens serviços 1" />
+          <swiper-container effect="fade"
+
+          disabled-on-interaction="false"
+          simulate-touch="false"
+          autoplay="true"
+          loop="true"
+          speed="750">
+            <swiper-slide>
+            <img loading="lazy" src="servicos-1.jpg" alt="Imagens serviços 1" />
+            </swiper-slide>
+            
+            <swiper-slide>
+            <img loading="lazy" src="servicos-2.jpg" alt="Imagens serviços 1" />
+            </swiper-slide>
+
+            <swiper-slide>
+            <img loading="lazy" src="servicos-3.jpg" alt="Imagens serviços 1" />
+            </swiper-slide>
+          </swiper-container>
         </app-quadro>
 
         <aside>
