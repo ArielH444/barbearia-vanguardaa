@@ -107,7 +107,7 @@ export class MenuSection extends LitElement {
         <app-logo></app-logo>
 
         <nav>
-          <button @click=${this.rolarUnidades}>Unidades <feather-icon icon="map-pin"></feather-icon></button>
+          <button title="Fechar menu" @click=${this.rolarUnidades}>Unidades <feather-icon icon="map-pin"></feather-icon></button>
           <button @click=${this.rolarContato}>Contato <feather-icon icon="phone"></feather-icon></button>
           <a @click=${nav.fechar} href="servicos"
             >Serviços <feather-icon icon="scissors"></feather-icon

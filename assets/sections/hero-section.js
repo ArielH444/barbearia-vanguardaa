@@ -81,7 +81,7 @@ export class HeroSection extends LitElement {
           <swiper-container loop="true" autoplay="true" speed="5000" disabled-on-interaction="false" effect="coverflow" simulate-touch="false" centered-slides="true" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
     coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
             <swiper-slide>
-            <img loading="lazy" src="slider-1.jpg" alt="Imagem slider" />
+            <img src="slider-1.jpg" alt="Imagem slider" />
             </swiper-slide>
             <swiper-slide>
             <img loading="lazy" src="slider-2.jpg" alt="Imagem slider" />
