@@ -1,10 +1,16 @@
 import { LitElement, html, css } from "lit";
+import { animate } from "../styles/animate-style";
 import { section } from "../styles/section-style";
 
 export class HeroSection extends LitElement {
   static styles = [
+    animate,
     section,
     css`
+:host {
+  --animation-delay: 0.3s;
+}
+
       section {
         display: flex;
         padding: 16px 0px;
@@ -13,7 +19,11 @@ export class HeroSection extends LitElement {
         gap: 0.5rem;
       }
 
-      span {
+      span{
+        display: inline-block;
+      }
+
+      .vanguarda {
         color: var(--tom-3);
         font-weight: 900;
       }
@@ -53,17 +63,33 @@ export class HeroSection extends LitElement {
         background-color: transparent;
       }
 
+      @keyframes slideInUp {
+  0% {
+    transform: translate3d(0px, 200%, 0px);
+    visibility: visible;
+  }
+100% {
+  transform: translateZ(0px);
+}
+
+}
+
       @media (max-width: 1024px) {
         app-logo {
           width: 220px;
           height: 220px;
         }
       }
+
+
       @media (min-width: 1024px) {
         app-paragrafo {
           display: none;
         }
       }
+
+
+
     `,
   ];
 
@@ -72,8 +98,8 @@ export class HeroSection extends LitElement {
       <section>
         <app-titulo
           ><h1>
-            Barbearia <br />
-            <span>Vanguarda</span>
+            <span class="animate__animated" data-toggle-class="animate__slideInUp">Barbearia</span> <br />
+            <span class="vanguarda animate__animated animate__delay-1s" data-toggle-class="animate__slideInUp">Vanguarda</span>
           </h1>
           <app-logo></app-logo>
         </app-titulo>

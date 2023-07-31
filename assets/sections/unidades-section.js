@@ -99,7 +99,7 @@ swiper.initialize()
 
   render() {
     return html`
-      <app-paragrafo>
+      <app-paragrafo  class="animate__animated animate__delay-1s" data-toggle-class="animate__fadeInUp">
         Nossa sede, localizada na zona leste de São Paulo, e as demais unidades,
         estão abertas todos os dias. <br />
         <br />
@@ -109,7 +109,7 @@ swiper.initialize()
       <!-- space-between="-75" initial-slide="1" rewind="true" -->
       <swiper-container init="false">
         <swiper-slide>
-          <app-mapa>
+          <app-mapa >
             <img      slot="imagem"
             loading="lazy"
             src="mapa-2.jpg"
